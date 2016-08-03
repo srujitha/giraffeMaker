@@ -1,4 +1,4 @@
-//pseudo-classical inheritence example
+//pseudo-classical inheritance example
 
 var Giraffe = function(name, height) {
   this.name = name;
