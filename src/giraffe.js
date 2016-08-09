@@ -1,8 +1,16 @@
-var giraffeMaker = function(name, height) {
+var giraffeMaker = function(name, height, weight) {
   var newGiraffe = {};
   newGiraffe.name = name;
   newGiraffe.height = height;
   newGiraffe.hunger = 10;
+  newGiraffe.weight = weight;
+
+  newGiraffe.isUnderWeight = function() {
+     var bmi = newGiraffe.weight/newGiraffe.height;
+     if(bmi < 18.5)
+        return true;
+     return false;
+  };
 
   newGiraffe.isTallEnough = function(treeHeight) {
     return newGiraffe.height > treeHeight;
